@@ -2,7 +2,7 @@
 % Choose edit mode variable
     % 1 := Edit mode
     % 0 := View mode
-\def\editmode{0}
+\def\editmode{1}
 
 
 \if\editmode1   % EDIT MODE 
@@ -11,19 +11,24 @@
 
     
     % ENABLING COMMENT COMMANDS
-    \newcommand{\cmt}[1]{\leavevmode\linebreak\noindent\textcolor{lightgreen}{\underline{[#1]}}\linebreak} 
     
-    \newcommand{\scmt}[1]{\leavevmode\newline\indent$\bullet$\hspace{1pt}\textcolor{lightgreen}{\underline{[#1]}}}
+    \newcommand{\acom}[1]{\noindent\textcolor{red}{{[#1]}}} % author's comment
     
-    \newcommand{\sscmt}[1]{\leavevmode\newline\indent\indent--\hspace{1pt}\textcolor{lightgreen}{\underline{[#1]}}}
+    \newcommand{\cmt}[1]{\leavevmode\linebreak\noindent\textcolor{lightgreen}{\underline{[#1]}}\linebreak} % top-level structural comment
+    
+    \newcommand{\scmt}[1]{\leavevmode\newline\indent$\bullet$\hspace{1pt}\textcolor{lightgreen}{\underline{[#1]}}} % first-level bullet comment
+    
+    \newcommand{\sscmt}[1]{\leavevmode\newline\indent\indent--\hspace{1pt}\textcolor{lightgreen}{\underline{[#1]}}} % second-level bullet comment 
     
     
     
 \else   % VIEW MODE 
     % BIBLIOGRAPHY STYLE
     \bibliographystyle{ieeetr}
+     
+    % DISABLING COMMENT COMMANDS   
+    \newcommand{\acom}[1]{\ignorespaces}   
     
-    % DISABLING COMMENT COMMANDS
     \newcommand{\cmt}[1]{\ignorespaces} 
     \newcommand{\scmt}[1]{\ignorespaces}
     \newcommand{\sscmt}[1]{\ignorespaces}
