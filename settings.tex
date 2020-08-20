@@ -1,0 +1,63 @@
+%%% EDIT / VIEW MODE %%%
+% Choose edit mode variable
+    % 1 := Edit mode
+    % 0 := View mode
+\def\editmode{0}
+
+
+\if\editmode1   % EDIT MODE 
+    % BIBLIOGRAPHY STYLE
+    \bibliographystyle{apalike}
+
+    
+    % ENABLING COMMENT COMMANDS
+    \newcommand{\cmt}[1]{\leavevmode\linebreak\noindent\textcolor{lightgreen}{\underline{[#1]}}\linebreak} 
+    
+    \newcommand{\scmt}[1]{\leavevmode\newline\indent$\bullet$\hspace{1pt}\textcolor{lightgreen}{\underline{[#1]}}}
+    
+    \newcommand{\sscmt}[1]{\leavevmode\newline\indent\indent--\hspace{1pt}\textcolor{lightgreen}{\underline{[#1]}}}
+    
+    
+    
+\else   % VIEW MODE 
+    % BIBLIOGRAPHY STYLE
+    \bibliographystyle{ieeetr}
+    
+    % DISABLING COMMENT COMMANDS
+    \newcommand{\cmt}[1]{\ignorespaces} 
+    \newcommand{\scmt}[1]{\ignorespaces}
+    \newcommand{\sscmt}[1]{\ignorespaces}
+    
+\fi
+
+%%% PACKAGES %%%
+% \usepackage{cite}
+\usepackage{color,verbatim}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{color,verbatim}
+\usepackage{multirow}
+\usepackage{accents}
+\usepackage{theoremref}
+\usepackage{tabularx}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{url}
+
+%%% COLORS %%%
+\definecolor{orange}{rgb}{1,0.8,0}
+\definecolor{gray}{rgb}{.9,0.9,0.9}
+\definecolor{darkgray}{rgb}{.3,0.3,0.3}
+\definecolor{darkblue}{rgb}{.1,0.0,0.3}
+\definecolor{lightblue}{rgb}{0.7,0.7,1}
+\definecolor{lightred}{rgb}{1,0.7,.7}
+\definecolor{purple}{RGB}{204,153,255}
+\definecolor{lightgray}{rgb}{.95,0.95,0.95}
+\definecolor{lightgreen}{rgb}{0.3,0.5,0.3}
+\definecolor{darkgreen}{rgb}{0.05,0.3,0.05}
+
+%%% NEW COMMANDS %%%

@@ -1,0 +1,28 @@
+%%% DOCUMENT CLASS %%%
+% Select the document class by uncommenting it
+
+%\documentclass[journal]{IEEEtran}
+%\documentclass[draftclsnofoot,onecolumn,12pt]{IEEEtran}
+% \documentclass[11pt,final,onecolumn]{IEEEtran}
+%\documentclass[10pt,final,twocolumn]{IEEEtran}
+%\documentclass[twocolumn,twoside]{IEEEtran}
+\documentclass[10pt, conference, letterpaper]{IEEEtran}
+
+%%% IMPORT SETTINGS %%%
+\input{settings}
+
+%%% MAIN DOCUMENT %%%
+\begin{document}
+    
+    % HEADLINE
+    \title{IEEE template title \thanks{Tanks / supporting}}
+    \author{ Author name}
+    \maketitle
+    
+    % SECTIONS
+    \input{ancillary/introduction.tex}
+
+    % BIBLIOGRAPHY
+    \bibliography{biblio}
+
+\end{document}
