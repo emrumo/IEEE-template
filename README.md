@@ -12,3 +12,10 @@ It allows to structure the paper ideas in a bullet scheme, that can be switched 
 * Edit mode
 
 ![Screenshot 2020-08-20 at 16 18 42](https://user-images.githubusercontent.com/43810121/90783909-f64d7d00-e300-11ea-8cae-4c28105ffef1.png)
+
+# Headline 1
+## Headline 2
+* this is a bullet
+**bold**
+
+[link](https://en.wikipedia.org/wiki/Reproducing_kernel_Hilbert_space#Connection_between_RKHS_with_ReLU_function)
